@@ -72,4 +72,57 @@
     width: 20rem;
     border-radius: 2rem;
   }
+  /* =================== MEDIA (medium devices) =================== */
+
+  @media screen and (max-width: 1024px) {
+    .prod-info {
+      margin-left: 4rem;
+    }
+
+    .header {
+      font-size: 2rem;
+    }
+
+    .info {
+      font-size: 1rem;
+    }
+
+    .price {
+      font-size: 1.3rem;
+    }
+
+    .img {
+      width: 15rem;
+      border-radius: 2rem;
+    }
+  }
+
+  /* =================== MEDIA (small devices) =================== */
+
+  @media screen and (max-width: 600px) {
+    .prod-info {
+      margin-left: 3rem;
+    }
+
+    .header {
+      font-size: 1.5rem;
+    }
+
+    .info {
+      font-size: 0.7rem;
+    }
+
+    .price {
+      font-size: 1rem;
+    }
+
+    .img {
+      width: 12rem;
+      border-radius: 2rem;
+    }
+
+    .btn {
+      width: 75%;
+    }
+  }
 </style>

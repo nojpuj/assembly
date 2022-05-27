@@ -65,4 +65,8 @@
     gap: 2rem;
     margin: 0 auto 3rem;
   }
+
+  .copyright {
+    color: white;
+  }
 </style>

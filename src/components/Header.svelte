@@ -31,7 +31,7 @@
 
   .video {
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 7.7rem;
   }
 
   .header {
@@ -53,11 +53,12 @@
   @media screen and (max-width: 1024px) {
     .header {
       font-size: 2.5rem;
+      margin-top: 6rem;
     }
 
     .header-info {
       font-size: 0.7rem;
-      margin-top: 7rem;
+      margin-top: 12rem;
     }
   }
 
@@ -66,11 +67,16 @@
   @media screen and (max-width: 600px) {
     .header {
       font-size: 1.5rem;
+      margin-top: 2rem;
     }
 
     .header-info {
       font-size: 0.5rem;
-      margin-top: 5rem;
+      margin-top: 7rem;
+    }
+
+    .video {
+      margin-top: 3.75rem;
     }
   }
 </style>
