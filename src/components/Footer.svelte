@@ -63,10 +63,28 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    font-size: 1rem;
     margin: 0 auto 3rem;
   }
 
   .copyright {
     color: white;
+  }
+
+  /* =================== MEDIA (small devices) =================== */
+
+  @media screen and (max-width: 600px) {
+    .permalinks {
+      font-size: 0.7rem;
+      gap: 1.5rem;
+    }
+
+    .copyright {
+      font-size: 0.7rem;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+    }
   }
 </style>

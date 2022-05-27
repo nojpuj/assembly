@@ -136,12 +136,16 @@
   /* =================== MEDIA (small devices) =================== */
 
   @media screen and (max-width: 600px) {
+    .prod-info > h3 {
+      font-size: 0.5rem;
+    }
+
     .prod-info > p {
       display: none;
     }
 
     .price {
-      font-size: 0.7rem;
+      font-size: 0.4rem;
       padding: 0 0 0 0.2rem;
     }
   }

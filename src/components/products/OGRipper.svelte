@@ -24,7 +24,7 @@
       </div>
       <div class="prod-info">
         <h1 class="header">Blind</h1>
-        <p class="info">OG Ripper, Red/Orange 7.75</p>
+        <p class="info">OG Ripper 7.75</p>
         <h3 class="price">1 299,-</h3>
         <br />
         <button class="btn" on:click={() => sidevisning("Shop")}
@@ -62,7 +62,6 @@
   }
 
   .prod-img {
-    background-color: var(--color-c);
     border-radius: 2rem;
     left: 2rem;
     top: 2rem;
@@ -101,11 +100,11 @@
 
   @media screen and (max-width: 600px) {
     .prod-info {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
 
     .header {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     .info {
@@ -117,7 +116,7 @@
     }
 
     .img {
-      width: 12rem;
+      width: 10rem;
       border-radius: 2rem;
     }
   }

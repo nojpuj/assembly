@@ -64,8 +64,8 @@
     {:else if visning === "OldLogo"}
       <OldLogo />
     {:else}
-      <h1>Shop</h1>
-      <p>Pick your own</p>
+      <h1 class="shop-h">Shop</h1>
+      <p class="shop-p">Pick your own</p>
       <div class="products">
         <!-- Bilde som man kan klikke på for å se nærmere på produktet -->
         <div class="content" on:click={() => sidevisning("Spectrum")}>
@@ -342,12 +342,16 @@
   /* =================== MEDIA (small devices) =================== */
 
   @media screen and (max-width: 600px) {
+    .prod-info > h3 {
+      font-size: 0.5rem;
+    }
+
     .prod-info > p {
       display: none;
     }
 
     .price {
-      font-size: 0.7rem;
+      font-size: 0.4rem;
       padding: 0 0 0 0.2rem;
     }
   }

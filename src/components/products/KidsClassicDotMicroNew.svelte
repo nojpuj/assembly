@@ -65,15 +65,15 @@
   }
 
   .prod-img {
-    background-color: var(--color-c);
     border-radius: 2rem;
+    left: 2rem;
+    top: 2rem;
   }
 
   .img {
     width: 20rem;
     border-radius: 2rem;
   }
-
   /* =================== MEDIA (medium devices) =================== */
 
   @media screen and (max-width: 1024px) {
@@ -103,11 +103,11 @@
 
   @media screen and (max-width: 600px) {
     .prod-info {
-      margin-left: 3rem;
+      margin-left: 2rem;
     }
 
     .header {
-      font-size: 1.5rem;
+      font-size: 1.1rem;
     }
 
     .info {
@@ -119,7 +119,8 @@
     }
 
     .img {
-      width: 12rem;
+      margin-left: 2rem;
+      width: 10rem;
       border-radius: 2rem;
     }
 
