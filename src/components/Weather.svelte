@@ -91,79 +91,91 @@
 <main>
   <!-- Seksjon med id til å skrolle til -->
   <section id="Weather">
-    <h1>Weather in Oslo</h1>
-    <p>Is it time to skate?</p>
+    <h1 class="header">Weather in Oslo</h1>
+    <p class="header-p">Is it time to skate?</p>
     <!-- Hele vær-widgeten, altså hele komponentet -->
     <div class="widget">
       <!-- If-løkke som kontrollerer om komponentet laster eller har lasta -->
-      {#if loading}
-        <!-- Egen kolonne til hver dag -->
-        <div class="lane">
-          <!-- Setter inn oppdaterte variabler -->
-          <h1>{date_now}</h1>
-          <!-- Første er annerldedes (lane2) fordi boksen skal være bredere -->
-          <div class="lane2">
-            <!-- Bilde/icon -->
-            <div class="icon">
-              <img src={icon_now} alt="icon" class="icon" />
-              <!-- Tilstander i tekst -->
-              <p>{cmt_now}</p>
-            </div>
-            <div class="conditions">
-              <!-- Temperatur -->
-              <!-- Bruker grader unicode som grader-tegnet -->
-              <h2>{temp_now} &#176;C</h2>
-              <!-- Vind, med unicode symbol -->
-              <!-- Regner om km/t til m/s -->
-              <p>&#128168; {(wind_now / 3.6).toFixed(1)} m/s</p>
-            </div>
+      <!-- {#if loading} -->
+      <!-- Egen kolonne til hver dag -->
+      <div class="lane">
+        <!-- Setter inn oppdaterte variabler -->
+        <h1>{date_now}</h1>
+        <!-- Første er annerldedes (lane2) fordi boksen skal være bredere -->
+        <div class="lane2">
+          <!-- Bilde/icon -->
+          <div class="icon">
+            <img src={icon_now} alt="icon" class="icon" />
+            <!-- Tilstander i tekst -->
+            <p>{cmt_now}</p>
+          </div>
+          <div class="conditions">
+            <!-- Temperatur -->
+            <!-- Bruker grader unicode som grader-tegnet -->
+            <h2>{temp_now} &#176;C</h2>
+            <!-- Vind, med unicode symbol -->
+            <!-- Regner om km/t til m/s -->
+            <p>&#128168; {(wind_now / 3.6).toFixed(1)} m/s</p>
           </div>
         </div>
-        <div class="lane">
-          <h1>{day0_day}</h1>
-          <div class="info">
-            <img src={day0_icon} alt="icon" class="icon" />
-            <p>{day0_cmt}</p>
-            <p class="temp-high">{day0_max} &#176;C</p>
-            <p class="temp-low">{day0_min} &#176;C</p>
-          </div>
+      </div>
+      <div class="lane">
+        <h1>{day0_day}</h1>
+        <div class="info">
+          <img src={day0_icon} alt="icon" class="icon" />
+          <p>{day0_cmt}</p>
+          <p class="temp-high">{day0_max} &#176;C</p>
+          <p class="temp-low">{day0_min} &#176;C</p>
         </div>
-        <div class="lane">
-          <h1>{day1_day}</h1>
-          <div class="info">
-            <img src={day1_icon} alt="icon" class="icon" />
-            <p>{day1_cmt}</p>
-            <p class="temp-high">{day1_max} &#176;C</p>
-            <p class="temp-low">{day1_min} &#176;C</p>
-          </div>
+      </div>
+      <div class="lane">
+        <h1>{day1_day}</h1>
+        <div class="info">
+          <img src={day1_icon} alt="icon" class="icon" />
+          <p>{day1_cmt}</p>
+          <p class="temp-high">{day1_max} &#176;C</p>
+          <p class="temp-low">{day1_min} &#176;C</p>
         </div>
-        <div class="lane">
-          <h1>{day2_day}</h1>
-          <div class="info">
-            <img src={day2_icon} alt="icon" class="icon" />
-            <p>{day2_cmt}</p>
-            <p class="temp-high">{day2_max} &#176;C</p>
-            <p class="temp-low">{day2_min} &#176;C</p>
-          </div>
+      </div>
+      <div class="lane">
+        <h1>{day2_day}</h1>
+        <div class="info">
+          <img src={day2_icon} alt="icon" class="icon" />
+          <p>{day2_cmt}</p>
+          <p class="temp-high">{day2_max} &#176;C</p>
+          <p class="temp-low">{day2_min} &#176;C</p>
         </div>
-        <div class="lane">
-          <h1>{day3_day}</h1>
-          <div class="info">
-            <img src={day3_icon} alt="icon" class="icon" />
-            <p>{day3_cmt}</p>
-            <p class="temp-high">{day3_max} &#176;C</p>
-            <p class="temp-low">{day3_min} &#176;C</p>
-          </div>
+      </div>
+      <div class="lane">
+        <h1>{day3_day}</h1>
+        <div class="info">
+          <img src={day3_icon} alt="icon" class="icon" />
+          <p>{day3_cmt}</p>
+          <p class="temp-high">{day3_max} &#176;C</p>
+          <p class="temp-low">{day3_min} &#176;C</p>
         </div>
-      {:else}
-        <!-- Tekst om api fortsatt loader -->
-        <p class="loading">Loading...</p>
-      {/if}
+      </div>
+      <!-- {:else} -->
+      <!-- Tekst om api fortsatt loader -->
+      <!-- <p class="loading">Loading...</p> -->
+      <!-- {/if} -->
     </div>
   </section>
 </main>
 
 <style>
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 0.8rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
   .widget {
     display: flex;
     flex-direction: row;
@@ -173,7 +185,7 @@
   }
 
   .lane {
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
   }
 
@@ -186,7 +198,7 @@
   .lane2 {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 0.9rem;
   }
 
   .icon {
@@ -203,19 +215,72 @@
 
   .loading {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.4rem;
   }
 
   /* =================== MEDIA (medium devices) =================== */
 
-  @media screen and (min-width: 40em) {
-    .widget {
-      min-width: none;
+  @media screen and (max-width: 1024px) {
+    h1 {
+      font-size: 0.9rem;
+    }
+
+    h2 {
+      font-size: 0.5rem;
+    }
+
+    p {
+      font-size: 0.4rem;
+    }
+
+    .loading {
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .icon {
+      width: 4rem;
+    }
+
+    .lane {
+      padding: 1rem;
+    }
+
+    .lane2 {
+      gap: 0.4rem;
     }
   }
 
   /* =================== MEDIA (small devices) =================== */
 
   @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 0.6rem;
+    }
+
+    h2 {
+      font-size: 0.45rem;
+    }
+
+    p {
+      font-size: 0.35rem;
+    }
+
+    .loading {
+      text-align: center;
+      font-size: 0.6rem;
+    }
+
+    .icon {
+      width: 3rem;
+    }
+
+    .lane {
+      padding: 0.8rem;
+    }
+
+    .lane2 {
+      gap: 0.4rem;
+    }
   }
 </style>
