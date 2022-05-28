@@ -147,7 +147,7 @@
           <p class="temp-low">{day2_min} &#176;C</p>
         </div>
       </div>
-      <div class="lane">
+      <div class="lane3">
         <h1>{day3_day}</h1>
         <div class="info">
           <img src={day3_icon} alt="icon" class="icon" />
@@ -216,6 +216,15 @@
     gap: 0.9rem;
   }
 
+  .lane3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.75rem;
+    text-align: center;
+  }
+
   .icon {
     width: 8rem;
   }
@@ -276,6 +285,11 @@
 
     .lane2 {
       gap: 0.4rem;
+    }
+
+    .lane3 {
+      position: absolute;
+      visibility: hidden;
     }
   }
 
