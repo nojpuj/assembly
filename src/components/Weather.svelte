@@ -107,6 +107,7 @@
           <div class="icon">
             <img src={icon_now} alt="icon" class="icon" />
             <!-- Tilstander i tekst -->
+            <h2 class="temp-now">{temp_now} &#176;C</h2>
             <p>{cmt_now}</p>
           </div>
           <div class="conditions">
@@ -164,6 +165,14 @@
 </main>
 
 <style>
+  .header {
+    font-size: 3rem;
+  }
+
+  .header-p {
+    font-size: 1rem;
+  }
+
   h1 {
     font-size: 1.2rem;
   }
@@ -185,6 +194,10 @@
   }
 
   .lane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 1.5rem;
     text-align: center;
   }
@@ -197,6 +210,8 @@
 
   .lane2 {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     gap: 0.9rem;
   }
@@ -213,6 +228,11 @@
     color: lightskyblue;
   }
 
+  .temp-now {
+    position: absolute;
+    visibility: hidden;
+  }
+
   .loading {
     text-align: center;
     font-size: 1.4rem;
@@ -221,12 +241,20 @@
   /* =================== MEDIA (medium devices) =================== */
 
   @media screen and (max-width: 1024px) {
+    .header {
+      font-size: 2.5rem;
+    }
+
+    .header-p {
+      font-size: 0.7rem;
+    }
+
     h1 {
       font-size: 0.9rem;
     }
 
     h2 {
-      font-size: 0.5rem;
+      font-size: 0.49rem;
     }
 
     p {
@@ -254,6 +282,14 @@
   /* =================== MEDIA (small devices) =================== */
 
   @media screen and (max-width: 600px) {
+    .header {
+      font-size: 1.5rem;
+    }
+
+    .header-p {
+      font-size: 0.5rem;
+    }
+
     h1 {
       font-size: 0.6rem;
     }
@@ -272,7 +308,7 @@
     }
 
     .icon {
-      width: 3rem;
+      width: 3.2rem;
     }
 
     .lane {
@@ -280,7 +316,18 @@
     }
 
     .lane2 {
-      gap: 0.4rem;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+
+    .conditions {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .temp-now {
+      position: relative;
+      visibility: visible;
     }
   }
 </style>

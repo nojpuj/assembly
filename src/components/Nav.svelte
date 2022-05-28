@@ -12,6 +12,7 @@
       <div class="menu">
         <div>
           <div>
+            <a class="link-h" href="#">Home</a>
             <a class="links" href="#NewDeals">News</a>
             <a class="links" href="#Locations">Parks</a>
             <a class="logo" href="#">
@@ -48,6 +49,17 @@
   }
 
   .links {
+    display: flex;
+    justify-content: center;
+    padding: 0.9rem;
+    display: flex;
+    color: white;
+    font-size: 1.1rem;
+  }
+
+  .link-h {
+    position: absolute;
+    visibility: hidden;
     display: flex;
     justify-content: center;
     padding: 0.9rem;
@@ -197,11 +209,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: 1rem;
+      padding: 0.7rem;
     }
 
-    .logo-img {
-      width: 4rem;
+    .logo {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .link-h {
+      position: relative;
+      visibility: visible;
     }
   }
 </style>
